@@ -9,11 +9,12 @@ import {
   useColorScheme,
   View,
 } from 'react-native';
-
+import RNBootSplash from 'react-native-bootsplash';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 
 const App: () => Node = () => {
   const isDarkMode = useColorScheme() === 'dark';
+  // RNBootSplash.hide({fade: true});
 
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,

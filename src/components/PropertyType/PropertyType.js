@@ -1,34 +1,42 @@
 import React from 'react';
 import {Image, Text, TouchableOpacity, View} from 'react-native';
-import styles from './SelectCategory.styles';
+import styles from './PropertyType.styles';
 import NeuMorph from '../NeuMorph';
-import {categories} from '../../utils/enums';
+import {propertyTypes} from '../../utils/enums';
 
-export default function SelectCategory({category, setCategory}) {
+export default function PropertyType({
+  category,
+  propertyType,
+  setPropertyType,
+}) {
   return (
     <View>
       <View>
-        <Text style={styles.heading}>Select category</Text>
+        <Text style={styles.heading}>Property type*</Text>
       </View>
       <View style={[styles.row, styles.justifyBetween]}>
-        {categories?.map((item, index) => {
+        {propertyTypes[category]?.map((item, index) => {
           return (
             <TouchableOpacity
               style={styles.categoryCard}
               key={index}
-              onPress={() => setCategory(item?.name)}>
+              onPress={() => setPropertyType(item?.name)}>
               <NeuMorph
-                style={category === item?.name ? styles.activeCategory : {}}>
+                style={
+                  propertyType === item?.name ? styles.activeProperty : {}
+                }>
                 <Image
                   source={item?.image}
                   style={
-                    category === item?.name ? styles.activeCategoryImage : {}
+                    propertyType === item?.name
+                      ? styles.activePropertyImage
+                      : {}
                   }
                 />
                 <Text
                   style={[
                     styles.cardLabel,
-                    category === item?.name ? styles.activeLabel : {},
+                    propertyType === item?.name ? styles.activeLabel : {},
                   ]}>
                   {item?.name}
                 </Text>

@@ -1,9 +1,6 @@
 import {StyleSheet} from 'react-native';
 
 export default StyleSheet.create({
-  row: {
-    flexDirection: 'row',
-  },
   heading: {
     paddingTop: 30,
     paddingBottom: 15,
@@ -11,6 +8,12 @@ export default StyleSheet.create({
     color: '#0A3A67',
     fontWeight: '600',
     lineHeight: 24,
+  },
+  row: {
+    flexDirection: 'row',
+  },
+  justifyBetween: {
+    justifyContent: 'space-between',
   },
   cardLabel: {
     color: '#0A3A67',
@@ -20,4 +23,7 @@ export default StyleSheet.create({
     paddingTop: 10,
     paddingBottom: 15,
   },
+  activeCategory: {backgroundColor: '#0A3A67'},
+  activeCategoryImage: {tintColor: '#fff'},
+  activeLabel: {color: '#fff'},
 });

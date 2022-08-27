@@ -11,10 +11,12 @@ export default StyleSheet.create({
   },
   row: {
     flexDirection: 'row',
+    flexWrap: 'wrap',
   },
   justifyBetween: {
     justifyContent: 'space-between',
   },
+  categoryCard: {width: '48%', height: 168},
   cardLabel: {
     color: '#0A3A67',
     fontSize: 14,

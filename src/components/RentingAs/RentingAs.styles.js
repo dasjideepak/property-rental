@@ -24,5 +24,5 @@ export default StyleSheet.create({
     paddingBottom: 15,
   },
   button: {padddingVertical: 13, paddingHorizontal: 30, marginRight: 8},
-  activeButton: {borderWidth: 1, borderColor: 'black'},
+  activeButton: {borderWidth: 1, borderColor: '#0A3A67'},
 });

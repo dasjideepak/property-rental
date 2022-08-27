@@ -17,7 +17,7 @@ export default StyleSheet.create({
     },
     shadowOpacity: 1,
     shadowRadius: 6,
-    shadowColor: '#EEF0F6',
+    shadowColor: '#ECEEF5',
   },
   inmer: {
     backgroundColor: '#EEF0F6',

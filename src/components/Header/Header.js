@@ -9,13 +9,12 @@ export default function Home() {
   return (
     <View style={styles.header}>
       <TouchableOpacity onPress={() => {}}>
-        <NeuMorph width={48} height={48}>
+        <NeuMorph style={styles.headerButtons}>
           <Image source={ImageLinks.headerArrowBack} />
         </NeuMorph>
       </TouchableOpacity>
-
       <TouchableOpacity onPress={() => Linking.openURL('tel:+919457369439')}>
-        <NeuMorph width={48} height={48}>
+        <NeuMorph style={styles.headerButtons}>
           <Image source={ImageLinks.headerCallCalling} />
         </NeuMorph>
       </TouchableOpacity>

@@ -16,8 +16,6 @@ export default function NeuMorph({
           style={[
             styles.inmer,
             {
-              // width: width || 40,
-              // height: height || 40,
               borderRadius: borderRadius || 10,
             },
             style,

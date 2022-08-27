@@ -5,4 +5,8 @@ export default StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
+  headerButtons: {
+    width: 48,
+    height: 48,
+  },
 });

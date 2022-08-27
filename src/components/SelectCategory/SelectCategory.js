@@ -15,7 +15,10 @@ export default function SelectCategory({category, setCategory}) {
       <View style={[styles.row, styles.justifyBetween]}>
         {categories?.map((catg, index) => {
           return (
-            <TouchableOpacity key={index} onPress={() => setCategory(catg)}>
+            <TouchableOpacity
+              style={styles.categoryCard}
+              key={index}
+              onPress={() => setCategory(catg)}>
               <NeuMorph style={category === catg ? styles.activeCategory : {}}>
                 <Image
                   source={ImageLinks.residentialProperty}

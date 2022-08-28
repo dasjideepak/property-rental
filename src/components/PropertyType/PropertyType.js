@@ -1,8 +1,7 @@
 import React from 'react';
-import {Image, Text, TouchableOpacity, View} from 'react-native';
-import styles from './PropertyType.styles';
-import NeuMorph from '../NeuMorph';
+import {View} from 'react-native';
 import {propertyTypes} from '../../utils/enums';
+import Cards from '../Cards';
 
 export default function PropertyType({
   category,
@@ -11,40 +10,12 @@ export default function PropertyType({
 }) {
   return (
     <View>
-      <View>
-        <Text style={styles.heading}>Property type*</Text>
-      </View>
-      <View style={[styles.row, styles.justifyBetween]}>
-        {propertyTypes[category]?.map((item, index) => {
-          return (
-            <TouchableOpacity
-              style={styles.categoryCard}
-              key={index}
-              onPress={() => setPropertyType(item?.name)}>
-              <NeuMorph
-                style={
-                  propertyType === item?.name ? styles.activeProperty : {}
-                }>
-                <Image
-                  source={item?.image}
-                  style={
-                    propertyType === item?.name
-                      ? styles.activePropertyImage
-                      : {}
-                  }
-                />
-                <Text
-                  style={[
-                    styles.cardLabel,
-                    propertyType === item?.name ? styles.activeLabel : {},
-                  ]}>
-                  {item?.name}
-                </Text>
-              </NeuMorph>
-            </TouchableOpacity>
-          );
-        })}
-      </View>
+      <Cards
+        heading={'Property type*'}
+        data={propertyTypes[category]}
+        activeCard={propertyType}
+        setActiveCard={setPropertyType}
+      />
     </View>
   );
 }

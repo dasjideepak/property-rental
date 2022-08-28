@@ -14,9 +14,8 @@ export default StyleSheet.create({
     flexWrap: 'wrap',
   },
   justifyBetween: {
-    justifyContent: 'space-around',
+    justifyContent: 'space-between',
   },
-  categoryCard: {width: '48%', height: 168},
   cardLabel: {
     color: '#0A3A67',
     fontSize: 14,
@@ -25,7 +24,11 @@ export default StyleSheet.create({
     paddingTop: 10,
     paddingBottom: 15,
   },
-  activeProperty: {backgroundColor: '#0A3A67'},
-  activePropertyImage: {tintColor: '#fff'},
-  activeLabel: {color: '#fff'},
+  button: {
+    padddingVertical: 13,
+    paddingHorizontal: 30,
+    marginVertical: 4,
+    marginRight: 8,
+  },
+  activeButton: {borderWidth: 1, borderColor: '#0A3A67'},
 });

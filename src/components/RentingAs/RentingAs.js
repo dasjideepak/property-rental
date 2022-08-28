@@ -1,31 +1,18 @@
 import React from 'react';
-import {Text, TouchableOpacity, View} from 'react-native';
-import styles from './RentingAs.styles';
-import NeuMorph from '../NeuMorph';
+import {View} from 'react-native';
 import {RENTING_AS} from '../../utils/enums';
+import Stack from '../Stack';
 
 export default function RentingAs({rentingAs, setRentingAs}) {
   const ownerType = [RENTING_AS.TENANT, RENTING_AS.OWNER];
   return (
     <View>
-      <View>
-        <Text style={styles.heading}>Renting as</Text>
-      </View>
-      <View style={styles.row}>
-        {ownerType?.map((item, index) => {
-          return (
-            <TouchableOpacity key={index} onPress={() => setRentingAs(item)}>
-              <NeuMorph
-                style={[
-                  styles.button,
-                  rentingAs === item ? styles.activeButton : {},
-                ]}>
-                <Text style={styles.cardLabel}>{item}</Text>
-              </NeuMorph>
-            </TouchableOpacity>
-          );
-        })}
-      </View>
+      <Stack
+        heading={'Renting as'}
+        data={ownerType}
+        activeItem={rentingAs}
+        setActiveItem={setRentingAs}
+      />
     </View>
   );
 }

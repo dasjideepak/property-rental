@@ -2,6 +2,7 @@ import React from 'react';
 import {Image, Text, TouchableOpacity, View} from 'react-native';
 import styles from './Cards.styles';
 import NeuMorph from '../NeuMorph';
+import Heading from '../Heading';
 
 export default function Cards({heading, data, activeCard, setActiveCard}) {
   function capitalize(str) {
@@ -9,9 +10,7 @@ export default function Cards({heading, data, activeCard, setActiveCard}) {
   }
   return (
     <View>
-      <View>
-        <Text style={styles.heading}>{heading}</Text>
-      </View>
+      <Heading label={heading} />
       <View style={[styles.row, styles.justifyBetween]}>
         {data?.map((item, index) => {
           return (

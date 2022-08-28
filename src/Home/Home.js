@@ -45,8 +45,8 @@ export default function Home() {
         {!showPropertyTypes && category && (
           <PropertyTypeTabs
             category={category}
-            occupancyStatus={propertyType}
-            setOccupancyStatus={setPropertyType}
+            propertyType={propertyType}
+            setPropertyType={setPropertyType}
           />
         )}
         <Bedrooms bedroomSize={bedroomSize} setBedroomSize={setBedroomSize} />

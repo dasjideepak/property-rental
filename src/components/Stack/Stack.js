@@ -2,13 +2,12 @@ import React from 'react';
 import {Text, TouchableOpacity, View} from 'react-native';
 import styles from './Stack.styles';
 import NeuMorph from '../NeuMorph';
+import Heading from '../Heading';
 
 export default function Stack({heading, data, activeItem, setActiveItem}) {
   return (
     <View>
-      <View>
-        <Text style={styles.heading}>{heading}</Text>
-      </View>
+      <Heading label={heading} />
       <View style={styles.row}>
         {data?.map((item, index) => {
           return (

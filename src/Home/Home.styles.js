@@ -1,15 +1,11 @@
 import {StyleSheet} from 'react-native';
 
 export default StyleSheet.create({
-  row: {
-    flexDirection: 'row',
-  },
-  cardLabel: {
+  disclaimer: {
+    textAlign: 'center',
     color: '#0A3A67',
-    fontSize: 14,
-    fontWeight: '500',
-    lineHeight: 21,
-    paddingTop: 10,
-    paddingBottom: 15,
+    fontSize: 12,
+    lineHeight: 18,
+    paddingVertical: 20,
   },
 });

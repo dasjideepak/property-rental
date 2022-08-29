@@ -1,21 +1,23 @@
 import React from 'react';
 import styles from './ActionButton.styles';
-import {Text, TouchableOpacity, View, Linking} from 'react-native';
+import {Text, TouchableOpacity, View, Linking, Alert} from 'react-native';
 
-export default function ActionButtons({setShowPropertyTypes}) {
-  const handleSkip = () => {
-    setShowPropertyTypes(false);
-  };
+export default function ActionButtons() {
+  const handleButtonClick = type => Alert.alert(`${type} Button Pressed`);
 
   return (
     <View>
       <View style={styles.row}>
-        <TouchableOpacity style={styles.button} onPress={handleSkip}>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => handleButtonClick('Skip')}>
           <Text style={[styles.proceedButtonText, styles.skipButtonText]}>
             Skip
           </Text>
         </TouchableOpacity>
-        <TouchableOpacity style={[styles.button, styles.proceedButton]}>
+        <TouchableOpacity
+          style={[styles.button, styles.proceedButton]}
+          onPress={() => handleButtonClick('Proceed')}>
           <Text style={styles.proceedButtonText}>Proceed</Text>
         </TouchableOpacity>
       </View>

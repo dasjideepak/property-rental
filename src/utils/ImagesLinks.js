@@ -19,6 +19,7 @@ const ImageLinks = {
   shop: require('../assets/images/property-type/shop/shop.png'),
   warehouse: require('../assets/images/property-type/warehouse/warehouse.png'),
   showroom: require('../assets/images/property-type/showroom/showroom.png'),
+  searchIcon: require('../assets/images/search-icon/search-icon.png'),
 };
 
 export default ImageLinks;

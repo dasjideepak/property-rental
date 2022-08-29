@@ -74,3 +74,14 @@ export const propertyTypes = {
     },
   ],
 };
+
+export const ownerType = ['Owned by self', 'Owned by a family member'];
+export const occupancyStatuses = [
+  'Vacant',
+  'Rented',
+  'Leased',
+  'Self occupied',
+  'Under construction',
+  'Newly constructed/Ready to move in',
+];
+export const bedroomSizes = ['1', '2', '2.5', '3', '3.5', '4', '5+', 'Studio'];
